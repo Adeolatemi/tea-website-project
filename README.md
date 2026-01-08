@@ -43,7 +43,7 @@ The website presents a brief personal profile, learning motivation, interests, a
    - Or use the Live Server extension in VS Code
 
 ## Application blurb (paste into TEA application)
-Hi — my name is Alawode Temitope Adeola. I have experience with front-end stacks (HTML, CSS, JavaScript) and have built responsive web interfaces. I'm now ready to learn backend development (APIs, databases, server-side architecture) and believe Tech Expert Academy (TEA) is the right place to help me transition to full-stack/backend development. My personal site: <your-site-url>
+Hi — my name is Alawode Temitope Adeola. I have experience with front-end stacks (HTML, CSS, JavaScript) and have built responsive web interfaces. I'm now ready to learn backend development (APIs, databases, server-side architecture) and believe Tech Expert Academy (TEA) is the right place to help me transition to full-stack/backend development. My personal site: https://adeolatemi.github.io/tea-website-project/
 
 ## Summary
 
