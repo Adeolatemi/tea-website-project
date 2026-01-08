@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Alawode Temitope Adeola — Personal Website</title>
+  <meta name="description" content="Personal website of Alawode Temitope Adeola — learner in web development, building projects, and exploring programming.">
+  <meta name="keywords" content="Alawode Temitope Adeola, web development, personal website, programming, learner">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav id="primary-nav" class="site-nav container" aria-label="Primary">
+      <button id="menu-toggle" class="menu-toggle" aria-controls="menu-list" aria-expanded="false" aria-label="Open menu">☰</button>
+      <ul id="menu-list" class="menu" hidden>
+        <li><a href="#about">About</a></li>
+        <li><a href="#motivation">Motivation</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+
+    <section class="hero container" aria-labelledby="hero-heading">
+      <header class="hero-inner">
+        <h1 id="hero-heading">Hi, I'm <strong>Alawode Temitope Adeola</strong></h1>
+        <p class="tagline">Front-end developer transitioning to backend. I build responsive UIs and I'm eager to learn server-side systems with TEA.</p>
+        <p class="cta"><a class="primary-btn" href="#contact">Get in touch</a></p>
+      </header>
+    </section>
+  </header>
+
+  <main id="main" class="container site-main">
+    <section class="content">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I’m Alawode Temitope Adeola. I have learned frontend web development and I’m comfortable with core frontend technologies and tools. I enjoy building user interfaces and turning designs into responsive, functional web pages.
+
+I’m now focused on learning backend development with Tech Expert Academy to better understand how systems work behind the scenes and to build complete, end-to-end web applications.</p>
+      </section>
+
+      <section id="motivation">
+        <h2>Why I'm learning tech</h2>
+        <p>I'm motivated to expand my skills beyond the front-end and learn backend development building APIs, working with databases, and understanding server-side architecture. TEA is the ideal place for me to gain structured guidance and practical experience.</p>
+      </section>
+
+      <section id="what-excites">
+        <h2>What excites me</h2>
+        <ul>
+          <li>Learning to code and ship real projects</li>
+          <li>Solving practical problems with software</li>
+          <li>Joining a community and collaborating on ideas</li>
+        </ul>
+      </section>
+    </section>
+
+    <aside class="sidebar" aria-labelledby="sidebar-heading">
+      <section id="projects">
+        <h2 id="sidebar-heading">Projects & Interests</h2>
+        <p>I'm starting with small projects to practice fundamentals: simple websites, small scripts to automate tasks, and following tutorials that guide me from idea to deployment.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <form id="contact-form" novalidate aria-describedby="form-status">
+          <fieldset>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required aria-required="true" />
+            <p class="error" id="name-error" aria-live="polite"></p>
+          </fieldset> 
+
+          <fieldset>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required aria-required="true" />
+            <p class="error" id="email-error" aria-live="polite"></p>
+          </fieldset> 
+
+          <fieldset>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required aria-required="true"></textarea>
+            <p class="error" id="message-error" aria-live="polite"></p>
+          </fieldset> 
+
+          <button type="submit" class="primary-btn">Send message</button>
+          <p id="form-status" role="status" aria-live="polite" aria-atomic="true" class="form-status"></p>
+        </form>
+        <p class="contact-info">Or email me directly: <a href="mailto:adeolafatosin@gmail.com">adeolafatosin@gmail.com</a></p>
+      </section>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>© <time id="year" datetime=""></time> Alawode Temitope Adeola</p>
+  </footer> 
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

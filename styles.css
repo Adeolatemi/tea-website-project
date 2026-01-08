@@ -1,0 +1,249 @@
+/* 
+  Global styles and design tokens
+  Uses CSS custom properties for theming and consistency
+*/
+:root{
+  --bg:#ffffff;        /* Page background */
+  --card:#ffffff;      /* Card and section background */
+  --accent:#0066ff;    /* Primary accent color */
+  --muted:#334155;     /* Secondary text color */
+  --text:#0b1220;      /* Primary text color */
+  --radius:10px;
+  --gap:18px;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"]{
+  --bg:#071023;
+  --card:#0f1724;
+  --accent:#7c5cff;
+  --muted:#9aa6b2;
+  --text:#e6eef8;
+}
+
+/* Base reset */
+*{box-sizing:border-box}
+html,body{min-height:100%}
+
+/* Global typography and layout */
+body{
+  margin:0;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.5;
+  word-break:break-word;
+}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:20px;
+}
+
+/* Skip link for keyboard navigation */
+.skip-link{
+  position:absolute;
+  left:-9999px;
+  top:auto;
+  background:#000;
+  color:#fff;
+  padding:8px 12px;
+  border-radius:4px;
+}
+.skip-link:focus{
+  left:12px;
+  top:12px;
+  z-index:999;
+}
+
+/* Navigation */
+.site-nav{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:12px;
+}
+
+.menu{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:12px;
+}
+
+.menu a{
+  color:var(--text);
+  text-decoration:none;
+  padding:8px;
+  border-radius:6px;
+}
+
+.menu a:hover{
+  background:color-mix(in srgb, var(--accent) 12%, transparent);
+}
+
+.menu-toggle{
+  display:none;
+  background:transparent;
+  border:1px solid rgba(16,24,40,0.06);
+  padding:8px 10px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Hero section */
+.hero{
+  background:linear-gradient(135deg,#e8f0ff 0%,#fff 100%);
+  padding:48px 0;
+  border-bottom:1px solid rgba(230,233,240,0.9);
+}
+
+.hero-inner{max-width:760px}
+
+.hero h1{
+  margin:0 0 8px;
+  font-size:28px;
+}
+
+.tagline{
+  margin:0 0 16px;
+  color:var(--muted);
+}
+
+.primary-btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+}
+
+.primary-btn:active{
+  transform:translateY(1px);
+}
+
+/* Main layout using CSS Grid */
+.site-main{
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:24px;
+  align-items:start;
+  padding-top:20px;
+}
+
+/* Content and sidebar cards */
+.content > section,
+.sidebar > section{
+  background:var(--card);
+  padding:18px;
+  border-radius:8px;
+  margin-top:18px;
+  box-shadow:0 1px 2px rgba(16,24,40,0.03);
+}
+
+.sidebar{min-width:0}
+
+/* Form styles */
+form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+fieldset{
+  border:0;
+  padding:0;
+  margin:0;
+}
+
+label{
+  font-weight:600;
+  margin-bottom:6px;
+  display:block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+  width:100%;
+  padding:10px;
+  border:1px solid #e6e9f0;
+  border-radius:8px;
+  background:transparent;
+  color:var(--text);
+}
+
+.error{
+  color:#b91c1c;
+  font-size:0.9rem;
+  min-height:18px;
+  display:block;
+}
+
+.form-status{
+  margin-top:6px;
+  color:var(--muted);
+}
+
+/* Footer */
+.footer{
+  padding:18px 0;
+  text-align:center;
+  color:var(--muted);
+  margin-top:36px;
+}
+
+/* Focus styles for accessibility */
+:focus{
+  outline:3px solid var(--accent);
+  outline-offset:2px;
+}
+
+/* Responsive breakpoints */
+@media (max-width:767px){
+  .menu{display:none}
+  .menu-toggle{display:inline-block}
+  .menu[hidden]{display:none}
+
+  .menu.open{
+    position:absolute;
+    top:56px;
+    right:20px;
+    background:var(--card);
+    box-shadow:0 8px 20px rgba(2,6,23,0.12);
+    padding:12px;
+    border-radius:8px;
+    flex-direction:column;
+  }
+
+  .site-main{
+    grid-template-columns:1fr;
+    padding:16px;
+  }
+
+  .hero{padding:28px 0}
+  .container{padding:16px}
+}
+
+@media (min-width:768px) and (max-width:1023px){
+  .site-main{grid-template-columns:1fr 300px}
+}
+
+@media (min-width:1024px){
+  .menu{display:flex}
+  .menu-toggle{display:none}
+  .site-main{grid-template-columns:1fr 320px}
+}
+
+/* Prevent media overflow */
+img,iframe,video{
+  max-width:100%;
+  height:auto;
+}
+
+html{overflow-y:scroll}
